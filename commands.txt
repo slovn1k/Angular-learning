@@ -1,0 +1,2 @@
+Create a new project -> ng new [app-name]
+Run the program      -> ng serve

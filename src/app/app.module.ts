@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import library for operating with forms in angular
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // here we are importing the module for form
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
