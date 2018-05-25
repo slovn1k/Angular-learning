@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-lg-12">
+        <!--here we are binding button property disabled with the variable allowNewServer-->
+        <!--the variable is with exclamation mark to get opposite value-->
+        <!--we assign to the click event in angular an method from typescript-->
+        <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+        <p>allowNewServer value: {{allowNewServer}}</p>
+        <p>serverCreation value: {{serverCreation}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <label for="serverName">Server name:</label>
+        <!--here we are binding the method to the input change value, $event is used because key pressing is an event-->
+        &nbsp;<input class="form-control" type="text" name="serverName" (input)="onUpdateServer($event)">
+        <!--here we are using two way binding to assign value for the input-->
+        &nbsp;<input class="form-control" type="text" name="serverName" [(ngModel)]="serverName">
+    </div>
+    <div class="col-lg-12">
+        <p>{{serverName}}</p>
+    </div>
+    <div class="col-lg-12">
+        <!--here we are using *ngIf with else statement that has a role of a simple if else-->
+        <p *ngIf="serverCreated; else noServer">Server created</p>
+        <ng-template #noServer>
+            <p>Server Not Created</p>
+        </ng-template>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <!--here we are importing server component in the servers component-->
+        <app-server></app-server>
+        <app-server></app-server>
+    </div>
+</div>

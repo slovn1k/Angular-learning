@@ -1,2 +1,4 @@
 Create a new project -> ng new [app-name]
 Run the program      -> ng serve
+Install bootstrap localy in the project -> npm install --save bootstrap
+Generate a new component -> ng generate component [component-name] || ng g c [component-name]
