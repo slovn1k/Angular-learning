@@ -3,4 +3,5 @@
 <!--here we are displaying data by calling a method from the typescript-->
 <p>The server with ID {{serverId}} has status {{getServerStatus()}}</p>
 <!--here we are using ngStyle to give style to the p tag, we assign to the property backgroun method from the typescript-->
-<p [ngStyle]="{backgroundColor: getServerColor()}"> Server with ID {{serverId}} has status {{serverStatus}}</p>
+<!--here we are using also ngClass to assign css class to the paragraph, we assign it only if serverStatus is online-->
+<p [ngStyle]="{backgroundColor: getServerColor()}" [ngClass]="{online: serverStatus === 'Online'}"> Server with ID {{serverId}} has status {{serverStatus}}</p>

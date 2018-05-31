@@ -30,7 +30,8 @@
 <div class="row">
     <div class="col-lg-12">
         <!--here we are importing server component in the servers component-->
-        <app-server></app-server>
-        <app-server></app-server>
+        <!--here we are looping throw the servers array by using *ngFor-->
+        <!--here we are assigning index to the i variable-->
+        <app-server *ngFor="let server of servers; let i = index">{{i}}</app-server>
     </div>
 </div>

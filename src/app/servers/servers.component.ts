@@ -16,6 +16,7 @@ export class ServersComponent implements OnInit {
     serverCreation = 'No Server was created!';
     serverName = 'Test';
     serverCreated = false;
+    servers = ['Test', 'TestServer 2'];
 
     constructor() {
         // here we are using javascript function to change the value of the allowNewServer variable after a certain period of time
@@ -30,6 +31,8 @@ export class ServersComponent implements OnInit {
     // this method assignees value to the serverCreation variables
     onCreateServer() {
         this.serverCreated = true;
+        // here we are pushing another component to the servers array that we have declared
+        this.servers.push(this.serverName);
         this.serverCreation = 'Server was created with the Name: ' + this.serverName;
     }
 
